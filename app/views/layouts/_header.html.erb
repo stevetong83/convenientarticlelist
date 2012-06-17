@@ -1,0 +1,11 @@
+<div id="logo">
+  <h1><%=   link_to "Convenient Article List", root_path	  %></h1></br>
+  <h2><%=	link_to "An Up-to-Date List of Article Submission Sites", root_path %></h2>
+</div>
+<div id="sign">
+  <%	 if signed_in? %>
+         Sign out
+  <%	 else %>
+         Sign in
+  <%	 end %>
+</div>

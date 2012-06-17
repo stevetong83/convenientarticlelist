@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convenientarticlelist</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="wrapper">
+  <div class="shadowtr"></div>
+  <div class="shadowtl"></div>
+  <div class="shadowr"></div>
+  <div class="shadowbl"></div>
+  <div class="shadowbr"></div>
+  <div class="shadowb"></div>
+
+  <div id="header">
+    <%=	 render "layouts/header" %>
+  </div> <!-- End of header -->
+
+  <div id="stage">
+    <div id="left-container">
+      <%= yield %>
+  </div> <!-- End of left container -->
+
+
+    <div id="right-container">
+      <%=	 render "layouts/right_sidebar" %>
+    </div>
+
+
+
+<div id="footer"></div>
+</div> <!-- End of stage -->
+</div> <!-- End of wrapper -->
+
+
+
+</body>
+</html>

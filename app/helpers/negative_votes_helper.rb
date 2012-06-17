@@ -1,0 +1,2 @@
+module NegativeVotesHelper
+end

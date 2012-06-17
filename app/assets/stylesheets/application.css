@@ -1,0 +1,169 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+
+body{
+    background-color: #7CB7DD;
+}
+
+h1 {
+    font-size: 200%;
+    line-height: 0;
+    margin: 0px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 100%;
+    line-height: 0;
+    margin: 5px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 110%;
+    color: #28406E;
+    margin: 0px;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 75%;
+    color: #999999;
+    font-weight:bold;
+}
+
+p {
+    color: #666666;
+    font-size: 80%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    line-height: 1.5;
+}
+
+a:link {color: #28406E;}
+a:visited {color: #7CB7DD;}
+a:hover {color: #28406E;}
+
+#wrapper {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFFFFF;
+    width: 1000px;
+    height: auto;
+}
+
+#header {
+    width: 980px;
+    height: 100px;
+    border-bottom: 2px;
+    border-bottom-color: #28406E;
+    border-bottom-style: solid;
+    margin-left: 20px;
+}
+
+#logo {
+    padding: 40px 0px 20px 0px;
+    color: #28406E;
+    float: left;
+}
+
+#logo a:link, a:hover, a:visited {
+    color: #28406E;
+    text-decoration: none;
+}
+
+#sign {
+    float: right;
+    padding-right: 40px;
+    padding-top: 5px;
+    color: #28406E;
+}
+
+#stage {
+    margin-top: 20px;
+    width: 1000px;
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: small;
+}
+
+#left-container {
+    float: left;
+    width: 650px;
+}
+
+#right-container {
+    float: left;
+    width: 300px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#content {
+    padding-left: 25px;
+}
+#navigation {
+    
+}
+
+#navigation ul li {
+    list-style-type: none;
+    padding-left: 50px;
+}
+
+#submission-site {
+    width: 650px;
+    padding: 15px 25px 5px 25px;
+}
+
+#site_title {
+
+}
+
+#votes {
+    float:left;
+    width: 100px;
+    height: 150px;
+}
+
+#description {
+    float: left;
+
+}
+
+#more_info {
+
+}
+
+#footer {
+    clear: both;
+    width: 1000px;
+    height: 50px;
+}
+
+/* Shadow and Rounded Corner Effect */
+.shadowtl {position:absolute; top:0; left:0; width:11px; height:100%; background:url(topleft.jpg) no-repeat; z-index:10;}
+.shadowtr {position:absolute; top:0; right:0; width:28px; height:100%; background:url(topright.jpg) no-repeat; z-index:10;}
+.shadowb  {position:absolute; bottom:0; left:0; height: 20px; width:100%; background:url(shadowbottom.jpg) top left repeat-x;z-index:5;}
+.shadowr  {position:absolute; top:0; right:0; width:28px; height:100%; background:url(shadowright.jpg) top left repeat-y;z-index:5;}
+.shadowbl {position:absolute; bottom:0; left:0;width:11px;height:20px;background:url(bottomleft.jpg) no-repeat;z-index:10;}
+.shadowbr {position:absolute; bottom:0; right:0;width:28px;height:22px;background:url(bottomright.jpg) no-repeat;z-index:10;}
+
+/* show/hide */
+.posthidden {display:none
+
+}
+.postshown {display:inline}

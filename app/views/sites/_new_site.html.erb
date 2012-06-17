@@ -1,0 +1,51 @@
+<%= form_for @site do |f| %>
+
+    <p xmlns="http://www.w3.org/1999/html">
+    <%=	 f.label :name, "Site Name:" %><br />
+    <%=	 f.text_field :name %>
+    </p>
+    
+    <p>
+      <%=	 f.label :url, "Site URL:" %><br />
+      <%=	 f.text_field :url %><br />
+      <em>(http://www.example.com)</em>
+    </p>
+    
+    <p>
+      <%=	 f.label :description, "Site Description:" %><br />
+      <%=	 f.text_area :description, :rows => 12 %><br />
+      <em>(maximum 500 characters)</em>
+    </p>
+    
+    <p>
+      <%=	 f.label :links, "Type of link: " %>
+      <%=	 f.select :links, %w(dofollow nofollow), :include_blank => true %>
+    </p>
+    
+    <p>
+      <%=	 f.label :number_of_links, "Number of Links Allowed: " %>
+      <%=	 f.select :number_of_links, %w(1 2 3 4+), :include_blank => true %>
+    </p>
+    
+    <p>
+      <%=	 f.label :link_placement %>
+      <%=	 f.select :link_placement, [['Body'], ['Author/Resource Box'], ['Both']], :include_blank => true %>
+    </p>
+    
+    <p>
+      <%=	 f.label :word_min, "Word Minimum" %>
+      <%=	 f.text_field :word_min %>
+    </p>
+
+    <p>
+      <%=	 f.label :approval_time %>
+      <%=	 f.select :approval_time, [['Immediately'], ['24 Hours'], ['48 Hours'], ['Less than 7 days'],
+                                        ['Less than 30 days'], ['More than 30 days']], :include_blank => true %>
+    </p>
+    
+    <p>
+      <%=     f.label :other_info, "Other information"	  %><br />
+      <%=	 f.text_area :other_info, :rows => 5 %>
+    </p>
+
+<%	 end %>
