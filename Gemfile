@@ -25,6 +25,8 @@ gem 'will_paginate'
 gem 'devise'
 gem 'cancan'
 gem 'rolify'
+gem 'switch_user'
+gem 'kaminari'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,3 +1,139 @@
 // Place all the styles related to the Sites controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#submission-site {
+  width: 650px;
+  padding: 15px 25px 5px 0px;
+}
+
+#site_title {
+  height: 30px;
+  float: left;
+  padding-top: 5px;
+
+}
+
+#votes {
+  float:left;
+  height: 30px;
+}
+
+.vote_img {
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+  float: left;
+}
+
+.posvote_number {
+  color: #22b106;
+  float: left;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+.negvote_number {
+  color: #f40701;
+  float: left;
+  margin-left: 10px;
+  padding-top: 10px;
+}
+
+#site_description {
+  clear: both;
+
+}
+
+#more_info {
+  color: #666666;
+  font-size: 85%;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  line-height: 1.5;
+}
+
+#more_info ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.more_comment {
+  font-weight: bold;
+}
+
+.more_comment a:link, a:visited {
+  text-decoration: none;
+}
+
+.more_comment a:hover {
+  text-decoration: underline;
+}
+
+#comments {
+  width: 625px;
+  margin-top: 40px;
+  border: 1px solid #7CB7DD;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#add_comments {
+  width: 275px;
+  float: left;
+
+}
+
+#new_site input, textarea, select {
+  border-radius: 5px;
+  padding: 3px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #bbb;
+
+}
+
+#comment_form input, textarea {
+  width: 250px;
+  border-radius: 5px;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #bbb;
+}
+
+.button {
+  width: 60px;
+}
+
+#show_comments {
+  width: 275px;
+  float: left;
+  padding-left: 25px;
+  border-left: 1px solid #7CB7DD;
+}
+
+#comment_item {
+  border-bottom: 1px solid #7CB7DD;
+  padding-bottom: 10px;
+  margin: 10px 0;
+}
+
+.comment_title {
+  color: #28406E;
+  font-weight: bold;
+}
+
+.comment_body {
+  color: #666666;
+  font-size: 80%;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  line-height: 1.5;
+}
+
+#comments_footer {
+  clear: both;
+  height: 1px;
+}

@@ -1,0 +1,8 @@
+<h1>Admin</h1>
+
+<ul>
+<%	 @users.each do |user| %>
+      <li>
+        <%= link_to user.email, "/switch_user?scope_identifier=user_#{user.id}", confirm: "Log in as user?" %>
+<%	 end %>
+</ul>

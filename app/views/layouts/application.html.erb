@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Convenientarticlelist</title>
+  <title><%=	 page_title %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -22,6 +22,19 @@
 
   <div id="stage">
     <div id="left-container">
+
+      <%	 if flash[:notice] %>
+          <div id="success_message">
+             <%=	 flash[:notice] %>
+          </div>
+      <%	 end %>
+
+      <%	 if flash[:error] %>
+          <div id="error_message">
+            <%=	 flash[:error] %>
+          </div>
+      <%	 end %>
+
       <%= yield %>
   </div> <!-- End of left container -->
 

@@ -26,15 +26,16 @@ h1 {
 h2 {
     font-size: 100%;
     line-height: 0;
-    margin: 5px;
+    margin: 10px 0 10px 0;
     font-weight: bold;
 }
 
 h3 {
-    font-size: 110%;
+    font-size: 120%;
     color: #28406E;
-    margin: 0px;
+    margin: 0 0 10px 0;
     font-weight: bold;
+
 }
 
 h5 {
@@ -44,16 +45,31 @@ h5 {
 }
 
 p {
-    color: #666666;
-    font-size: 80%;
+    padding-top: 5px 0;
+}
+
+#devise {
+    margin-top: 20px;
+}
+
+#devise input, textarea {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #bbb;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
     margin-top: 5px;
-    margin-bottom: 0px;
-    line-height: 1.5;
+    width: 40%;
 }
 
 a:link {color: #28406E;}
 a:visited {color: #7CB7DD;}
 a:hover {color: #28406E;}
+
+.red {
+    color: red;
+}
 
 #wrapper {
     position: relative;
@@ -102,7 +118,8 @@ a:hover {color: #28406E;}
 
 #left-container {
     float: left;
-    width: 650px;
+    width: 625px;
+    padding-left: 25px;
 }
 
 #right-container {
@@ -112,46 +129,33 @@ a:hover {color: #28406E;}
     padding-right: 25px;
 }
 
-#content {
-    padding-left: 25px;
-}
-#navigation {
-    
-}
-
 #navigation ul li {
     list-style-type: none;
     padding-left: 50px;
-}
-
-#submission-site {
-    width: 650px;
-    padding: 15px 25px 5px 25px;
-}
-
-#site_title {
-
-}
-
-#votes {
-    float:left;
-    width: 100px;
-    height: 150px;
-}
-
-#description {
-    float: left;
-
-}
-
-#more_info {
-
 }
 
 #footer {
     clear: both;
     width: 1000px;
     height: 50px;
+}
+
+#success_message {
+    color: #4F8A10;
+    background-color: #cfc;
+    border: 1px solid #9c9;
+    padding: 10px;
+    margin: 0px 25px 10px 0px;
+    border-radius: 5px;
+}
+
+#error_message {
+    color: #D63301;
+    background-color: #FFCCBA;
+    border: 1px solid #D63301;
+    margin: 0px 25px 10px 0px;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 /* Shadow and Rounded Corner Effect */

@@ -1,0 +1,75 @@
+<div id="submission-site">
+
+<div id="site_title">
+  <h3><%=	 link_to @site.name, @site.url  %></h3>
+</div>   <!-- end site_title     -->
+
+<div id="votes">
+          <span class="vote_img">
+          <%=	 form_for(@positive_vote) do |f| %>
+                <%=	 f.hidden_field :site_id, :value => @site.id %>
+                <%=	 f.hidden_field "ip_address", :value => request.remote_ip %>
+                <%=	 image_submit_tag "voteup.jpg" %>
+            <%	 end %>
+          </span>
+          <span class="posvote_number">
+          <%=	 @site.positive_votes.size %>
+          </span>
+          <span class="vote_img">
+          <%=	 form_for(@negative_vote) do |f| %>
+                <%=	 f.hidden_field :site_id, :value => @site.id %>
+                <%=	 f.hidden_field "ip_address", :value => request.remote_ip %>
+                <%=	 image_submit_tag "votedown.jpg" %>
+            <%	 end %>
+          </span>
+           <span class="negvote_number">
+          <%=	 @site.negative_votes.size %>
+          </span>
+</div>   <!-- end votes    -->
+
+</div>    <!-- end submission-site     -->
+
+<div id="comments">
+
+  <div id="add_comments">
+
+    <div id="comment_form">
+      Submit a comment:<br />
+      <%=	 form_for [@site, @site.comments.build] do |f| %>
+          <p>
+            <%=	 f.label :name %><br />
+            <%=	 f.text_field :name %>
+          </p>
+          <p>
+            <%=	 f.label :comment %><br />
+            <%=	 f.text_area :comment, :rows => 3 %>
+          </p>
+          </div>  <!-- end comment_form     -->
+          <div id="comment_buttton">
+            <span class="button"><%=	 f.submit "Submit Comment" %></span>
+          </div>  <!-- end comment_button     -->
+      <%	 end %>
+
+      </div>  <!-- end add_comments     -->
+
+  <div id="show_comments">
+
+    <%	 @comments.each do |comment| %>
+        <div id="comment_item">
+          <span class="comment_title"><%=	 comment.name %></span>
+          <%	 if can? :delete, comment %>
+              <%= link_to 'Delete', site_comment_path(@site, comment), :confirm => 'Are you sure?', :method => :delete %>
+          <%	 end %>
+          <br />
+          <span class="comment_body"><%=	 comment.comment %></span><br />
+          <span class="comment_body"><em>Posted <%=	 time_ago_in_words(comment.created_at) %> ago </em></span>
+        </div>  <!-- end comment_item     -->
+    <%	 end %>
+
+    <%=	 will_paginate @comments %>
+
+  </div>   <!-- end show_comments     -->
+
+  <div id="comments_footer"></div>
+
+</div>   <!-- end comments     -->

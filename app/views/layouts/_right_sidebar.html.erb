@@ -3,5 +3,12 @@
   <li><%=	 link_to "Add a Site", new_path %></li>
   <li><%=	 link_to "Home", root_path %></li>
   <li><%=	 link_to "Contact", "#" %></li>
+
+            <%	 if user_signed_in? %>
+  <li><%=	 link_to "Profile", current_user %></li>
+             <%	 if current_user.has_role? :admin %>
+  <li><%=	 link_to "Admin", admin_path %></li>
+              <%	 end %>
+              <%	 end %>
 </ul>
 </div>

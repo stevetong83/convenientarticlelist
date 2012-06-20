@@ -4,8 +4,6 @@ class CreateSites < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.text :description
-      t.integer :positive_votes
-      t.integer :negative_votes
       t.string :email
 
       t.timestamps

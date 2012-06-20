@@ -1,10 +1,23 @@
 Convenientarticlelist::Application.routes.draw do
 
-  resources :sites
+  get "pages/contact"
+
+get "positive_votes/create"
+
+  devise_for :users
+
+  resources :users
+  resources :sites do
+    resources :comments
+  end
+
   resources :positive_votes
   resources :negative_votes
 
+
   match "/new", to: "sites#new"
+  match "/admin", to: "users#admin"
+
 
 
   # The priority is based upon order of creation:

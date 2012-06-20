@@ -1,0 +1,22 @@
+<div id="content">
+<h1>Profile</h1>
+  
+  <p>
+    <%=	 link_to "Edit Profile", edit_user_registration_path %>
+  </p>
+
+<p>
+  Email: <%=	 @user.email %>
+</p>
+  
+  <p>
+    Sites: <%	 @user.sites.each do |site| %>
+    <p>
+      <%=	 site.name %>
+      <%=	 link_to "Edit", edit_site_path(site) %>
+      <%=	 link_to "Delete", {:controller => "sites", :action => 'destroy', :id => site.id},
+                      :confirm => "Are you sure?", :method => :delete %>
+    </p>
+    <%	 end %>
+  </p>
+</div>

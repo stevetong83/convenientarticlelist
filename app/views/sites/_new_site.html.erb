@@ -1,18 +1,26 @@
+<div id="new_site">
 <%= form_for @site do |f| %>
 
-    <p xmlns="http://www.w3.org/1999/html">
-    <%=	 f.label :name, "Site Name:" %><br />
+    <%=	 render "layouts/error_messages", :target => @site %>
+
+    <p>
+    <%=	 f.label :name, "Site Name:" %><span class="red">*</span><br />
     <%=	 f.text_field :name %>
     </p>
     
     <p>
-      <%=	 f.label :url, "Site URL:" %><br />
+      <%=	 f.label :url, "Site URL:" %><span class="red">*</span><br />
       <%=	 f.text_field :url %><br />
       <em>(http://www.example.com)</em>
     </p>
     
     <p>
-      <%=	 f.label :description, "Site Description:" %><br />
+      <%=	 f.label :email, "Support Email" %><br />
+      <%=	 f.text_field :email %>
+    </p>
+    
+    <p>
+      <%=	 f.label :description, "Site Description:" %><span class="red">*</span><br />
       <%=	 f.text_area :description, :rows => 12 %><br />
       <em>(maximum 500 characters)</em>
     </p>
@@ -46,6 +54,14 @@
     <p>
       <%=     f.label :other_info, "Other information"	  %><br />
       <%=	 f.text_area :other_info, :rows => 5 %>
+    </p>
+      </div>
+    <p>
+      <%=	 f.submit "Submit Article Site" %>
+    </p>
+
+    <p>
+      <span class="red">*required</span>
     </p>
 
 <%	 end %>

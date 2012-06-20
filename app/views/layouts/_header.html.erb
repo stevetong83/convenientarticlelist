@@ -4,8 +4,8 @@
 </div>
 <div id="sign">
   <%	 if signed_in? %>
-         Sign out
+         <%=	 link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
   <%	 else %>
-         Sign in
+         <%=	 link_to "Sign in", new_user_session_path %>
   <%	 end %>
 </div>

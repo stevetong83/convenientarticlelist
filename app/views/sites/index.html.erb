@@ -1,4 +1,81 @@
-<div id="submission-site">
-  <h3><a href="http://www.ezinearticles.com" target="_blank">Ezine Articles</a></h3>
-  <p>EzineArticles.com serves millions of unique visitors monthly and has over 100,000+ RSS feeds plus 700+ email alert lists designed to announce every new article posted to over 100,000 permission-based members/publishers. You will get a chance to receive a massive increase in exposure and a boost in credibility. You will be able to include a short blurb about yourself, your business, and your website in your Resource Box (located directly below your article body) that delivers pre-qualified visitors back to your website.</p>
-</div>
+
+  <%	 @sites.each do |site| %>
+      <div id="submission-site">
+
+  <div id="site_title">
+      <h3><%=	 link_to site.name, site.url  %></h3>
+  </div>
+
+        <div id="votes">
+          <span class="vote_img">
+          <%=	 form_for(@positive_vote) do |f| %>
+                <%=	 f.hidden_field :site_id, :value => site.id %>
+                <%=	 f.hidden_field "ip_address", :value => request.remote_ip %>
+                <%=	 image_submit_tag "voteup.jpg" %>
+            <%	 end %>
+          </span>
+          <span class="posvote_number">
+          <%=	 site.positive_votes.size %>
+          </span>
+          <span class="vote_img">
+          <%=	 form_for(@negative_vote) do |f| %>
+                <%=	 f.hidden_field :site_id, :value => site.id %>
+                <%=	 f.hidden_field "ip_address", :value => request.remote_ip %>
+                <%=	 image_submit_tag "votedown.jpg" %>
+            <%	 end %>
+          </span>
+           <span class="negvote_number">
+          <%=	 site.negative_votes.size %>
+          </span>
+        </div>
+
+  <div id="site_description">
+    <%=	    site.description %><br />
+    <%	 if can? :update, site %>
+    <%=	 link_to "Edit", edit_site_path(site) %> |
+        <%	 end %>
+    <%	 if can? :delete, site %>
+    <%= link_to "Delete", site, confirm: "Are you sure?", method: :delete %>
+
+    <%	 end %>
+  </div>
+        
+   <div id="more_info">
+     <ul>
+     <li><%	 if site.email.empty? %>
+         Support Email Not Available
+         <%	 else %>
+     Support Email: <%=	 site.email %>
+         <%	 end %></li>
+     <li><%	 unless site.links.empty? %>
+         Type of link: <%=	 site.links %>
+     <%	 end %></li>
+     <li><%	 unless site.number_of_links.empty? %>
+         Number of links allowed: <%=	 site.number_of_links %>
+     <%	 end %></li>
+     <li><%	 unless site.link_placement.empty? %>
+         Link placement Body/Resource Box: <%=	 site.link_placement %>
+     <%	 end %></li>
+     <li><%	 unless site.word_min.empty? %>
+         Word minimum: <%=	 site.word_min %>
+     <%	 end %></li>
+     <li><%	 unless site.approval_time.empty? %>
+         Approval time: <%=	 site.approval_time %>
+     <%	 end %></li>
+       <li><%	 unless site.other_info.empty? %>
+             Other info: <%=	 site.other_info %>
+         <%	 end %></li>
+     </ul>
+     <span class="more_comment"><%=	 link_to "Comments", site_path(site) %></span>
+   </div>
+
+
+
+
+
+      </div>
+  <%	 end %>
+
+
+
+  <%=	 will_paginate @sites, :param_name => 'sites_page' %>
