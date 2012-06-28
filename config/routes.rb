@@ -1,9 +1,5 @@
 Convenientarticlelist::Application.routes.draw do
 
-  get "pages/contact"
-
-get "positive_votes/create"
-
   devise_for :users
 
   resources :users
@@ -13,10 +9,13 @@ get "positive_votes/create"
 
   resources :positive_votes
   resources :negative_votes
-
+  resources :messages
 
   match "/new", to: "sites#new"
   match "/admin", to: "users#admin"
+
+  match '/contact' => 'messages#contact', :as => 'contact', :via => :get
+  match '/contact' => 'messages#create', :as => 'contact', :via => :post
 
 
 

@@ -1,0 +1,5 @@
+<%=	 form_for(@positive_vote, remote: true) do |f| %>
+    <%=	 f.hidden_field :site_id, :value => @site.id %>
+    <%=	 f.hidden_field "ip_address", :value => request.remote_ip %>
+    <%=	 image_submit_tag "voteup.jpg" %>
+<%	 end %>

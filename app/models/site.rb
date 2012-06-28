@@ -13,6 +13,7 @@ class Site < ActiveRecord::Base
   validates :description, :presence => true,
                           :length => {:maximum => 600}
   validates :other_info, :length => {:maximum => 700}
+  validates :word_min, :numericality => {:allow_blank => true}
 
 
 

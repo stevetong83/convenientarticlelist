@@ -1,25 +1,30 @@
-
+<% @page_title = "Sign in" %>
 
 <h2>Sign in</h2>
 <div id="devise">
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
+
+      <%	 if flash[:alert] %>
+          <div id="error_message">
+            <%=	 flash[:alert] %>
+          </div>
+      <%	 end %>
+
+      <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>
-
       </div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
+      <div id="submit_button">
   <p>
   <div><%= f.submit "Sign in" %></div>
       </p>
+  </div>
 <% end %>
+
    <p>
 <%= render "devise/shared/links" %>
    </p>

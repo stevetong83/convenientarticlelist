@@ -1,0 +1,2 @@
+$("#posvote_img").html("<%= escape_javascript(render('positive_votes/positive_vote')) %>")
+$("#posvote_number").html("<%= @site.positive_votes.size %>")

@@ -13,15 +13,15 @@ class PositiveVotesController < ApplicationController
     if ((@lastvote && current_time - last_vote_time >= 12.hours) || @lastvote.blank?)
       if @positive_vote.save
         redirect_to :back
-      else
-        redirect_to root_path
-      end
-
+        end
     else
       flash[:error] = "You can only vote for one item every 12 hours"
       redirect_to :back
 
     end
   end
-  end
+
+end
+
+
 

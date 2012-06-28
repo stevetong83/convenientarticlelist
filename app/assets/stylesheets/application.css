@@ -35,7 +35,6 @@ h3 {
     color: #28406E;
     margin: 0 0 10px 0;
     font-weight: bold;
-
 }
 
 h5 {
@@ -132,6 +131,16 @@ a:hover {color: #28406E;}
 #navigation ul li {
     list-style-type: none;
     padding-left: 50px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+#navigation a:link, a:visited {
+    text-decoration: none;
+}
+
+#navigation a:hover {
+    text-decoration: underline;
 }
 
 #footer {
@@ -158,6 +167,11 @@ a:hover {color: #28406E;}
     padding: 10px;
 }
 
+#reset_button {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
 /* Shadow and Rounded Corner Effect */
 .shadowtl {position:absolute; top:0; left:0; width:11px; height:100%; background:url(topleft.jpg) no-repeat; z-index:10;}
 .shadowtr {position:absolute; top:0; right:0; width:28px; height:100%; background:url(topright.jpg) no-repeat; z-index:10;}
@@ -166,8 +180,3 @@ a:hover {color: #28406E;}
 .shadowbl {position:absolute; bottom:0; left:0;width:11px;height:20px;background:url(bottomleft.jpg) no-repeat;z-index:10;}
 .shadowbr {position:absolute; bottom:0; right:0;width:28px;height:22px;background:url(bottomright.jpg) no-repeat;z-index:10;}
 
-/* show/hide */
-.posthidden {display:none
-
-}
-.postshown {display:inline}

@@ -3,7 +3,8 @@
 <div id="devise">
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+
+            <%= devise_error_messages! %>
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
@@ -14,9 +15,11 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
       </div>
+      <div id="submit_button">
    <p>
   <div><%= f.submit "Sign up" %></div>
       </p>
+          </div>
 <% end %>
      <p>
 <%= render "devise/shared/links" %>

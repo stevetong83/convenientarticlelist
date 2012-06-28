@@ -7,16 +7,16 @@
   </div>
 
         <div id="votes">
-          <span class="vote_img">
+          <div id="posvote_img">
           <%=	 form_for(@positive_vote) do |f| %>
                 <%=	 f.hidden_field :site_id, :value => site.id %>
                 <%=	 f.hidden_field "ip_address", :value => request.remote_ip %>
                 <%=	 image_submit_tag "voteup.jpg" %>
             <%	 end %>
-          </span>
-          <span class="posvote_number">
+          </div>
+          <div id="posvote_number">
           <%=	 site.positive_votes.size %>
-          </span>
+          </div>
           <span class="vote_img">
           <%=	 form_for(@negative_vote) do |f| %>
                 <%=	 f.hidden_field :site_id, :value => site.id %>
@@ -39,43 +39,43 @@
 
     <%	 end %>
   </div>
-        
-   <div id="more_info">
+
+        <span class="more_comment"><%=	 link_to "Comments", site_path(site) %></span>
+
+         - <span class="slide_toggle">More Info</span>
+
+   <span class="more_info">
      <ul>
      <li><%	 if site.email.empty? %>
-         Support Email Not Available
+         <b>Support Email Not Available</b>
          <%	 else %>
-     Support Email: <%=	 site.email %>
+           <b>Support Email:</b> <%=	 site.email %>
          <%	 end %></li>
      <li><%	 unless site.links.empty? %>
-         Type of link: <%=	 site.links %>
+         <b>Type of link:</b> </b> <%=	 site.links %>
      <%	 end %></li>
      <li><%	 unless site.number_of_links.empty? %>
-         Number of links allowed: <%=	 site.number_of_links %>
+           <b>Number of links allowed:</b> <%=	 site.number_of_links %>
      <%	 end %></li>
      <li><%	 unless site.link_placement.empty? %>
-         Link placement Body/Resource Box: <%=	 site.link_placement %>
+           <b>Link placement Body/Resource Box:</b> <%=	 site.link_placement %>
      <%	 end %></li>
      <li><%	 unless site.word_min.empty? %>
-         Word minimum: <%=	 site.word_min %>
+           <b>Word minimum:</b> <%=	 site.word_min %>
      <%	 end %></li>
      <li><%	 unless site.approval_time.empty? %>
-         Approval time: <%=	 site.approval_time %>
+           <b>Approval time:</b> <%=	 site.approval_time %>
      <%	 end %></li>
        <li><%	 unless site.other_info.empty? %>
-             Other info: <%=	 site.other_info %>
+             <b>Other info:</b> <%=	 site.other_info %>
          <%	 end %></li>
      </ul>
-     <span class="more_comment"><%=	 link_to "Comments", site_path(site) %></span>
-   </div>
-
-
-
+   </span>
+        <br />
 
 
       </div>
   <%	 end %>
 
-
-
   <%=	 will_paginate @sites, :param_name => 'sites_page' %>
+

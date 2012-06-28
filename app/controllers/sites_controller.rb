@@ -13,7 +13,7 @@ class SitesController < ApplicationController
   end
 
   def new
-    @page_title = "Submit a new article submission site"
+    @page_title = "Submit a messages article submission site"
     @site = Site.new
   end
 
@@ -58,7 +58,7 @@ class SitesController < ApplicationController
     @site = Site.find params[:id]
     @site.destroy
     flash[:notice] = "Site has been deleted"
-    redirect_to root_path
+    redirect_to :back
   end
 
 end

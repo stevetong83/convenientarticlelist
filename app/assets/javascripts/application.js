@@ -13,3 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function() {
+
+$(".more_info").hide();
+
+    $('.slide_toggle').hover(function() {
+
+
+      $(this).toggleClass('underline');
+    });
+
+    $(".slide_toggle").click(function() {
+        $(this).next('.more_info').slideToggle("slow");
+
+    });
+
+});

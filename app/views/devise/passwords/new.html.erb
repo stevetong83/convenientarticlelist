@@ -2,11 +2,11 @@
 
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
-
+ <div id="devise">
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
-
-  <div><%= f.submit "Send me reset password instructions" %></div>
+ </div>
+  <div id="reset_button"><%= f.submit "Send me reset password instructions" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>

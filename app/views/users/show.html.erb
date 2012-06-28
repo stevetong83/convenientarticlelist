@@ -1,16 +1,13 @@
-<div id="content">
-<h1>Profile</h1>
-  
   <p>
     <%=	 link_to "Edit Profile", edit_user_registration_path %>
   </p>
 
 <p>
-  Email: <%=	 @user.email %>
+  <b>Email:</b> <%=	 @user.email %>
 </p>
   
   <p>
-    Sites: <%	 @user.sites.each do |site| %>
+    <b>Sites:</b> <%	 @user.sites.each do |site| %>
     <p>
       <%=	 site.name %>
       <%=	 link_to "Edit", edit_site_path(site) %>
@@ -19,4 +16,4 @@
     </p>
     <%	 end %>
   </p>
-</div>
+

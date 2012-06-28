@@ -19,6 +19,13 @@
   height: 30px;
 }
 
+#posvote_img {
+  height: 30px;
+  width: 30px;
+  margin-left: 20px;
+  float: left;
+}
+
 .vote_img {
   height: 30px;
   width: 30px;
@@ -26,7 +33,7 @@
   float: left;
 }
 
-.posvote_number {
+#posvote_number {
   color: #22b106;
   float: left;
   margin-left: 10px;
@@ -45,7 +52,7 @@
 
 }
 
-#more_info {
+#site_info {
   color: #666666;
   font-size: 85%;
   margin-top: 5px;
@@ -53,7 +60,21 @@
   line-height: 1.5;
 }
 
-#more_info ul {
+#site_info ul {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.more_info {
+  color: #666666;
+  font-size: 85%;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  line-height: 1.5;
+}
+
+.more_info ul {
   margin: 0px;
   padding: 0px;
   list-style-type: none;
@@ -61,6 +82,10 @@
 
 .more_comment {
   font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .more_comment a:link, a:visited {
@@ -73,7 +98,7 @@
 
 #comments {
   width: 625px;
-  margin-top: 40px;
+  margin-top: 10px;
   border: 1px solid #7CB7DD;
   padding: 10px;
   border-radius: 5px;
@@ -82,16 +107,28 @@
 #add_comments {
   width: 275px;
   float: left;
-
 }
 
-#new_site input, textarea, select {
+#new_site input[type=text] {
+  width: 50%;
   border-radius: 5px;
-  padding: 3px;
+  padding: 5px;
   border-style: solid;
   border-width: 1px;
   border-color: #bbb;
+}
 
+#new_site select {
+  border-radius: 5px;
+  padding: 1px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #bbb;
+}
+
+.ask {
+  display: inline-block;
+  width: 125px;
 }
 
 #comment_form input, textarea {
@@ -136,4 +173,18 @@
 #comments_footer {
   clear: both;
   height: 1px;
+}
+
+.slide_toggle {
+  font-weight: bold;
+  color: #28406E;
+  cursor: pointer;
+}
+
+#site_description textarea, input {
+  width: 90%;
+}
+
+#submit_button {
+  width: 30%;
 }
