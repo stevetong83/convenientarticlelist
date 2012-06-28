@@ -79,7 +79,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="0" selection-start="659" selection-end="659" vertical-scroll-proportion="0.5313283">
+            <state line="12" column="8" selection-start="218" selection-end="218" vertical-scroll-proportion="0.24938875">
               <folding />
             </state>
           </provider>
@@ -89,15 +89,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/sites/_new_site.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="78" column="0" selection-start="2211" selection-end="2211" vertical-scroll-proportion="-51.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="697" selection-end="829" vertical-scroll-proportion="-20.26923">
               <folding />
             </state>
           </provider>
@@ -133,8 +124,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="742" />
-    <option name="y" value="10" />
+    <option name="x" value="898" />
+    <option name="y" value="5" />
     <option name="width" value="862" />
     <option name="height" value="1010" />
   </component>
@@ -805,7 +796,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="742" y="10" width="862" height="1010" extended-state="0" />
+    <frame x="898" y="5" width="862" height="1010" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -936,20 +927,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sites/_new_site.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="0" selection-start="2211" selection-end="2211" vertical-scroll-proportion="-51.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="697" selection-end="829" vertical-scroll-proportion="-20.26923">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="0" selection-start="160" selection-end="292" vertical-scroll-proportion="-4.576923">
@@ -985,9 +962,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="697" selection-end="829" vertical-scroll-proportion="0.6713376">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sites/_new_site.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="0" selection-start="2211" selection-end="2211" vertical-scroll-proportion="-51.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="0" selection-start="659" selection-end="659" vertical-scroll-proportion="0.5313283">
+        <state line="12" column="8" selection-start="218" selection-end="218" vertical-scroll-proportion="0.24938875">
           <folding />
         </state>
       </provider>
