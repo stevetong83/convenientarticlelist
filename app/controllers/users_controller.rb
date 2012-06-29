@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     if current_user.id != @user.id
       redirect_to root_path
     end
+    @page_title = "Profile"
   end
 
 end

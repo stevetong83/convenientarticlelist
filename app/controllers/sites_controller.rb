@@ -7,7 +7,7 @@ class SitesController < ApplicationController
 
     @sites = Site.paginate  :page => params[:sites_page],
                             :per_page => 10,
-                            :order => "positive_votes_count"
+                            :order => "positive_votes_count DESC NULLS LAST"
     @positive_vote = PositiveVote.new params[:positive_vote]
     @negative_vote = NegativeVote.new params[:negative_vote]
   end
@@ -35,6 +35,7 @@ class SitesController < ApplicationController
                                   :order => "created_at DESC"
     @positive_vote = PositiveVote.new params[:positive_vote]
     @negative_vote = NegativeVote.new params[:negative_vote]
+    @page_title = @site.name
   end
 
   def edit

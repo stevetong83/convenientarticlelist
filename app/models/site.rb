@@ -15,6 +15,10 @@ class Site < ActiveRecord::Base
   validates :other_info, :length => {:maximum => 700}
   validates :word_min, :numericality => {:allow_blank => true}
 
+  def to_param
+    "#{id}-#{name.gsub(/\W/, '-').downcase}"
+  end
+
 
 
 end
