@@ -33,6 +33,7 @@ gem 'devise'
 gem 'cancan'
 gem 'rolify'
 gem 'switch_user'
+gem 'heroku'
 
 
 
